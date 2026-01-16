@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
-<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 <html>
+
 <title>
     Tech Stack Toolkit
 </title>
@@ -14,17 +14,14 @@
 </header>
 <header class="site-body">
 
-{% for post in posts %}
-<article class = "post">
-    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<article class="postInd">
+    <h2>{{ post.title }}</h2>
     <p>{{ post.text }}<br></br></p>
     <p1>Posted by: {{ post.author }}</p>
     <time>Date Published: {{ post.datePublished }} </time>
     <button class=postButton> Reply </button>
-    <br></br>   
+    <br></br> 
 </article>
-{% endfor %}
-
-</header>
-
 </html>
