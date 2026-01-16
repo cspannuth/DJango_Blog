@@ -11,6 +11,7 @@
             Welcome to the Tech Stack Toolkit Blog!
         </h1>
     </div>
+    <button class = 'newPostButton'><a href="{% url 'post_new' %}" class="top-menu">New Post</a></button>
 </header>
 <header class="site-body">
 
@@ -20,7 +21,7 @@
     <p>{{ post.text }}<br></br></p>
     <p1>Posted by: {{ post.author }}</p>
     <time>Date Published: {{ post.datePublished }} </time>
-    <button class=postButton> Reply </button>
+    <button class='postButton'> <a href="{% url 'post_detail' pk=post.pk %}"> Reply </a></button>
     <br></br>   
 </article>
 {% endfor %}

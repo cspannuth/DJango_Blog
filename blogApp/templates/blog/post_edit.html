@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<html>
+<title>
+    Tech Stack Toolkit
+</title>
+<header class = "page-header">
+    <div class = "container">
+        <h1>
+            Tech Stack Toolkit Blog!
+        </h1>
+    </div>
+</header>
+<header class="site-body">
+
+<h2>New post!</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <p>Posting as: {{ request.user }}</p>
+        <button type="submit" class="save btn btn-secondary">Save</button>
+    </form>
