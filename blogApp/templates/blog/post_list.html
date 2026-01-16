@@ -1,18 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 <title>
     Tech Stack Toolkit
 </title>
-<h>
-    Welcome to the Tech Stack Toolkit Blog!
-</h>
+<header class = "page-header">
+    <div class = "container">
+        <h1>
+            Welcome to the Tech Stack Toolkit Blog!
+        </h1>
+    </div>
+</header>
+
 
 {% for post in posts %}
-<article>
-    <h2><strong>{{ post.title }} </strong></h2>
+<article class = "post">
+    <h2>{{ post.title }}</h2>
     <p>{{ post.text }}</p>
     <time>Date Published: {{ post.datePublished }} </time>
-    <br>---------------------------------------------------------------------------</br>   
+    <br></br>   
 </article>
 {% endfor %}
 

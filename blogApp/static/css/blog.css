@@ -1,0 +1,22 @@
+h {
+    color:dodgerblue;
+    font-family: 'Ariel';
+    font-size: 30px;
+}
+
+.page-header {
+    background-color: crimson;
+    margin-bottom: 40px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h2 {
+    font-weight: bold;
+}
+
+.post time {
+    font-size: 12px;
+}
