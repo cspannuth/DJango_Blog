@@ -4,7 +4,16 @@
     Tech Stack Toolkit
 </title>
 <h>
-    Welcome to the first iteration of the blog!
+    Welcome to the Tech Stack Toolkit Blog!
 </h>
+
+{% for post in posts %}
+<article>
+    <h2><strong>{{ post.title }} </strong></h2>
+    <p>{{ post.text }}</p>
+    <time>Date Published: {{ post.datePublished }} </time>
+    <br>---------------------------------------------------------------------------</br>   
+</article>
+{% endfor %}
 
 </html>
